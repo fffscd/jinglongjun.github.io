@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Dubbo 注册中心 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="RegistryService">
+<meta name="keywords" content="Dubbo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dubbo 注册中心">
+<meta property="og:url" content="http://yoursite.com/2019/08/01/Dubbo-注册中心/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="RegistryService">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-01T12:43:52.798Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Dubbo 注册中心">
+<meta name="twitter:description" content="RegistryService">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -132,85 +137,107 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Dubbo-注册中心" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/Dubbo-注册远程服务/" class="archive-article-date">
-  	<time datetime="2019-08-01T12:44:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/Dubbo-注册远程服务/">Dubbo-注册远程服务</a>
+    <h1 class="article-title" itemprop="name">
+      Dubbo 注册中心
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Dubbo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/Dubbo-注册中心/" class="archive-article-date">
+        
+        <a href="/2019/08/01/Dubbo-注册中心/" class="archive-article-date">
   	<time datetime="2019-08-01T12:43:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/Dubbo-注册中心/">Dubbo 注册中心</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>RegistryService</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * RegistryService. (SPI, Prototype, ThreadSafe)</span><br><span class="line"> *</span><br><span class="line"> * @see com.alibaba.dubbo.registry.Registry</span><br><span class="line"> * @see com.alibaba.dubbo.registry.RegistryFactory#getRegistry(URL)</span><br><span class="line"> */</span><br><span class="line">public interface RegistryService &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Register data, such as : provider service, consumer address, route rule, override rule and other data.</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * Registering is required to support the contract:&lt;br&gt;</span><br><span class="line">     * 1. When the URL sets the check=false parameter. When the registration fails, the exception is not thrown and retried in the background. Otherwise, the exception will be thrown.&lt;br&gt;</span><br><span class="line">     * 2. When URL sets the dynamic=false parameter, it needs to be stored persistently, otherwise, it should be deleted automatically when the registrant has an abnormal exit.&lt;br&gt;</span><br><span class="line">     * 3. When the URL sets category=routers, it means classified storage, the default category is providers, and the data can be notified by the classified section. &lt;br&gt;</span><br><span class="line">     * 4. When the registry is restarted, network jitter, data can not be lost, including automatically deleting data from the broken line.&lt;br&gt;</span><br><span class="line">     * 5. Allow URLs which have the same URL but different parameters to coexist,they can&apos;t cover each other.&lt;br&gt;</span><br><span class="line">     *</span><br><span class="line">     * @param url  Registration information , is not allowed to be empty, e.g: dubbo://10.20.153.10/com.alibaba.foo.BarService?version=1.0.0&amp;application=kylin</span><br><span class="line">     */</span><br><span class="line">    void register(URL url);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Unregister</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * Unregistering is required to support the contract:&lt;br&gt;</span><br><span class="line">     * 1. If it is the persistent stored data of dynamic=false, the registration data can not be found, then the IllegalStateException is thrown, otherwise it is ignored.&lt;br&gt;</span><br><span class="line">     * 2. Unregister according to the full url match.&lt;br&gt;</span><br><span class="line">     *</span><br><span class="line">     * @param url Registration information , is not allowed to be empty, e.g: dubbo://10.20.153.10/com.alibaba.foo.BarService?version=1.0.0&amp;application=kylin</span><br><span class="line">     */</span><br><span class="line">    void unregister(URL url);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Subscrib to eligible registered data and automatically push when the registered data is changed.</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * Subscribing need to support contracts:&lt;br&gt;</span><br><span class="line">     * 1. When the URL sets the check=false parameter. When the registration fails, the exception is not thrown and retried in the background. &lt;br&gt;</span><br><span class="line">     * 2. When URL sets category=routers, it only notifies the specified classification data. Multiple classifications are separated by commas, and allows asterisk to match, which indicates that all categorical data are subscribed.&lt;br&gt;</span><br><span class="line">     * 3. Allow interface, group, version, and classifier as a conditional query, e.g.: interface=com.alibaba.foo.BarService&amp;version=1.0.0&lt;br&gt;</span><br><span class="line">     * 4. And the query conditions allow the asterisk to be matched, subscribe to all versions of all the packets of all interfaces, e.g. :interface=*&amp;group=*&amp;version=*&amp;classifier=*&lt;br&gt;</span><br><span class="line">     * 5. When the registry is restarted and network jitter, it is necessary to automatically restore the subscription request.&lt;br&gt;</span><br><span class="line">     * 6. Allow URLs which have the same URL but different parameters to coexist,they can&apos;t cover each other.&lt;br&gt;</span><br><span class="line">     * 7. The subscription process must be blocked, when the first notice is finished and then returned.&lt;br&gt;</span><br><span class="line">     *</span><br><span class="line">     * @param url      Subscription condition, not allowed to be empty, e.g. consumer://10.20.153.10/com.alibaba.foo.BarService?version=1.0.0&amp;application=kylin</span><br><span class="line">     * @param listener A listener of the change event, not allowed to be empty</span><br><span class="line">     */</span><br><span class="line">    void subscribe(URL url, NotifyListener listener);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Unsubscribe</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * Unsubscribing is required to support the contract:&lt;br&gt;</span><br><span class="line">     * 1. If don&apos;t subscribe, ignore it directly.&lt;br&gt;</span><br><span class="line">     * 2. Unsubscribe by full URL match.&lt;br&gt;</span><br><span class="line">     *</span><br><span class="line">     * @param url      Subscription condition, not allowed to be empty, e.g. consumer://10.20.153.10/com.alibaba.foo.BarService?version=1.0.0&amp;application=kylin</span><br><span class="line">     * @param listener A listener of the change event, not allowed to be empty</span><br><span class="line">     */</span><br><span class="line">    void unsubscribe(URL url, NotifyListener listener);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Query the registered data that matches the conditions. Corresponding to the push mode of the subscription, this is the pull mode and returns only one result.</span><br><span class="line">     *</span><br><span class="line">     * @param url Query condition, is not allowed to be empty, e.g. consumer://10.20.153.10/com.alibaba.foo.BarService?version=1.0.0&amp;application=kylin</span><br><span class="line">     * @return The registered information list, which may be empty, the meaning is the same as the parameters of &#123;@link com.alibaba.dubbo.registry.NotifyListener#notify(List&lt;URL&gt;)&#125;.</span><br><span class="line">     * @see com.alibaba.dubbo.registry.NotifyListener#notify(List)</span><br><span class="line">     */</span><br><span class="line">    List&lt;URL&gt; lookup(URL url);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体实现如下图：<br>![IMAGE](quiver-image-url/D846105C3FB569C1D1BD52C5F4B9EAF6.jpg =724x261)</p>
+<h1 id="AbstractRegistry"><a href="#AbstractRegistry" class="headerlink" title="AbstractRegistry"></a>AbstractRegistry</h1><p>AbstractRegistry 提供Registry的基本实现，在初始化时，提供文件的缓存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String filename = url.getParameter(Constants.FILE_KEY, System.getProperty(&quot;user.home&quot;) + &quot;/.dubbo/dubbo-registry-&quot; + url.getParameter(Constants.APPLICATION_KEY) + &quot;-&quot; + url.getAddress() + &quot;.cache&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>在我本地的电脑，就存在如下缓存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">~/.dubbo » pwd                                                                                                          </span><br><span class="line">/Users/jinglongjun/.dubbo</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">~/.dubbo » ls                                                                                                           </span><br><span class="line">dubbo-registry-null-127.0.0.1:2182.cache                                    dubbo-registry-springboot-dubbo-provider-zoo1.superboss.cc:30002.cache.lock</span><br><span class="line">dubbo-registry-null-127.0.0.1:2182.cache.lock                               dubbo-registry-zoo1.superboss.cc.cache</span><br><span class="line">dubbo-registry-springboot-dubbo-consumer-zoo1.superboss.cc:30002.cache      dubbo-registry-zoo1.superboss.cc.cache.lock</span><br><span class="line">dubbo-registry-springboot-dubbo-consumer-zoo1.superboss.cc:30002.cache.lock dubbo-registry-zoo4.superboss.cc.cache</span><br><span class="line">dubbo-registry-springboot-dubbo-provider-zoo1.superboss.cc:30002.cache      dubbo-registry-zoo4.superboss.cc.cache.lock</span><br></pre></td></tr></table></figure>
+
+<p>在配置文件中，也可以手动指定缓存文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;dubbo:registry address=&quot;$&#123;zookeeper.address&#125;&quot; file=&quot;.cache/dubbo-registry-car.cache&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>缓存文件，简单来说它就是用来做容灾的，consumer从注册中心订阅了provider等信息后会缓存到本地文件中，这样当注册中心不可用时，consumer启动时就可以加载这个缓存文件里面的内容与provider进行交互，这样就可以不依赖注册中心，但是无法获取到新的provider变更通知，所以如果provider信息在注册中心不可用这段时间发生了很大变化，那就很可能会出现服务无法调用的情况。</p>
+<p>FailbackRegistry 重写 AbstractRegistry，并实现一些重试机制</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public FailbackRegistry(URL url) &#123;</span><br><span class="line">    super(url);</span><br><span class="line">    this.retryPeriod = url.getParameter(Constants.REGISTRY_RETRY_PERIOD_KEY, Constants.DEFAULT_REGISTRY_RETRY_PERIOD);</span><br><span class="line">    this.retryFuture = retryExecutor.scheduleWithFixedDelay(new Runnable() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            // Check and connect to the registry</span><br><span class="line">            try &#123;</span><br><span class="line">                retry();</span><br><span class="line">            &#125; catch (Throwable t) &#123; // Defensive fault tolerance</span><br><span class="line">                logger.error(&quot;Unexpected error occur at failed retry, cause: &quot; + t.getMessage(), t);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, retryPeriod, retryPeriod, TimeUnit.MILLISECONDS);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="RegistryFactory"><a href="#RegistryFactory" class="headerlink" title="RegistryFactory"></a>RegistryFactory</h1><p>Dubbo通过RegistryFactory#getRegistry 方法来获取对应的注册中心</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">@SPI(&quot;dubbo&quot;)</span><br><span class="line">public interface RegistryFactory &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Connect to the registry</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * Connecting the registry needs to support the contract: &lt;br&gt;</span><br><span class="line">     * 1. When the check=false is set, the connection is not checked, otherwise the exception is thrown when disconnection &lt;br&gt;</span><br><span class="line">     * 2. Support username:password authority authentication on URL.&lt;br&gt;</span><br><span class="line">     * 3. Support the backup=10.20.153.10 candidate registry cluster address.&lt;br&gt;</span><br><span class="line">     * 4. Support file=registry.cache local disk file cache.&lt;br&gt;</span><br><span class="line">     * 5. Support the timeout=1000 request timeout setting.&lt;br&gt;</span><br><span class="line">     * 6. Support session=60000 session timeout or expiration settings.&lt;br&gt;</span><br><span class="line">     *</span><br><span class="line">     * @param url Registry address, is not allowed to be empty</span><br><span class="line">     * @return Registry reference, never return empty value</span><br><span class="line">     */</span><br><span class="line">    @Adaptive(&#123;&quot;protocol&quot;&#125;)</span><br><span class="line">    Registry getRegistry(URL url);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到该类默认是SPI，默认实现为dubbo。</p>
+<p>AbstractRegistryFactory#getRegistry</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">    public Registry getRegistry(URL url) &#123;</span><br><span class="line">        url = url.setPath(RegistryService.class.getName())</span><br><span class="line">                .addParameter(Constants.INTERFACE_KEY, RegistryService.class.getName())</span><br><span class="line">                .removeParameters(Constants.EXPORT_KEY, Constants.REFER_KEY);</span><br><span class="line">        String key = url.toServiceString();</span><br><span class="line">        // Lock the registry access process to ensure a single instance of the registry</span><br><span class="line">        LOCK.lock();</span><br><span class="line">        try &#123;</span><br><span class="line">            Registry registry = REGISTRIES.get(key);</span><br><span class="line">            if (registry != null) &#123;</span><br><span class="line">                return registry;</span><br><span class="line">            &#125;</span><br><span class="line">            registry = createRegistry(url);</span><br><span class="line">            if (registry == null) &#123;</span><br><span class="line">                throw new IllegalStateException(&quot;Can not create registry &quot; + url);</span><br><span class="line">            &#125;</span><br><span class="line">            REGISTRIES.put(key, registry);</span><br><span class="line">            return registry;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            // Release the lock</span><br><span class="line">            LOCK.unlock();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终createRegistry交由子类实现，我们参考ZookeeperRegistryFactory#createRegistry</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public Registry createRegistry(URL url) &#123;</span><br><span class="line">    return new ZookeeperRegistry(url, zookeeperTransporter);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public ZookeeperRegistry(URL url, ZookeeperTransporter zookeeperTransporter) &#123;</span><br><span class="line">    super(url);</span><br><span class="line">    if (url.isAnyHost()) &#123;</span><br><span class="line">        throw new IllegalStateException(&quot;registry address == null&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    String group = url.getParameter(Constants.GROUP_KEY, DEFAULT_ROOT);</span><br><span class="line">    if (!group.startsWith(Constants.PATH_SEPARATOR)) &#123;</span><br><span class="line">        group = Constants.PATH_SEPARATOR + group;</span><br><span class="line">    &#125;</span><br><span class="line">    this.root = group;</span><br><span class="line">    zkClient = zookeeperTransporter.connect(url);</span><br><span class="line">    zkClient.addStateListener(new StateListener() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void stateChanged(int state) &#123;</span><br><span class="line">            if (state == RECONNECTED) &#123;</span><br><span class="line">                try &#123;</span><br><span class="line">                    recover();</span><br><span class="line">                &#125; catch (Exception e) &#123;</span><br><span class="line">                    logger.error(e.getMessage(), e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终初始化 zkClient，同时增加状态监听。</p>
+<p>ZK Client的连接通过ZkclientZookeeperClient 来实现连接。<br>recover方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">protected void recover() throws Exception &#123;</span><br><span class="line">    // register</span><br><span class="line">    Set&lt;URL&gt; recoverRegistered = new HashSet&lt;URL&gt;(getRegistered());</span><br><span class="line">    if (!recoverRegistered.isEmpty()) &#123;</span><br><span class="line">        if (logger.isInfoEnabled()) &#123;</span><br><span class="line">            logger.info(&quot;Recover register url &quot; + recoverRegistered);</span><br><span class="line">        &#125;</span><br><span class="line">        for (URL url : recoverRegistered) &#123;</span><br><span class="line">            failedRegistered.add(url);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // subscribe</span><br><span class="line">    Map&lt;URL, Set&lt;NotifyListener&gt;&gt; recoverSubscribed = new HashMap&lt;URL, Set&lt;NotifyListener&gt;&gt;(getSubscribed());</span><br><span class="line">    if (!recoverSubscribed.isEmpty()) &#123;</span><br><span class="line">        if (logger.isInfoEnabled()) &#123;</span><br><span class="line">            logger.info(&quot;Recover subscribe url &quot; + recoverSubscribed.keySet());</span><br><span class="line">        &#125;</span><br><span class="line">        for (Map.Entry&lt;URL, Set&lt;NotifyListener&gt;&gt; entry : recoverSubscribed.entrySet()) &#123;</span><br><span class="line">            URL url = entry.getKey();</span><br><span class="line">            for (NotifyListener listener : entry.getValue()) &#123;</span><br><span class="line">                addFailedSubscribed(url, listener);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上代码完成订阅中心的初始化</p>
+<h1 id="订阅中心-注册节点"><a href="#订阅中心-注册节点" class="headerlink" title="订阅中心 注册节点"></a>订阅中心 注册节点</h1><p>ZookeeperRegistry#doRegister</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">protected void doRegister(URL url) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        zkClient.create(toUrlPath(url), url.getParameter(Constants.DYNAMIC_KEY, true));</span><br><span class="line">    &#125; catch (Throwable e) &#123;</span><br><span class="line">        throw new RpcException(&quot;Failed to register &quot; + url + &quot; to zookeeper &quot; + getUrl() + &quot;, cause: &quot; + e.getMessage(), e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="订阅中心订阅服务"><a href="#订阅中心订阅服务" class="headerlink" title="订阅中心订阅服务"></a>订阅中心订阅服务</h1><p>ZookeeperRegistry#doSubscribe</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">protected void doSubscribe(final URL url, final NotifyListener listener) &#123;</span><br><span class="line">       try &#123;</span><br><span class="line">           if (Constants.ANY_VALUE.equals(url.getServiceInterface())) &#123;</span><br><span class="line">               String root = toRootPath();</span><br><span class="line">               ConcurrentMap&lt;NotifyListener, ChildListener&gt; listeners = zkListeners.get(url);</span><br><span class="line">               if (listeners == null) &#123;</span><br><span class="line">                   zkListeners.putIfAbsent(url, new ConcurrentHashMap&lt;NotifyListener, ChildListener&gt;());</span><br><span class="line">                   listeners = zkListeners.get(url);</span><br><span class="line">               &#125;</span><br><span class="line">               ChildListener zkListener = listeners.get(listener);</span><br><span class="line">               if (zkListener == null) &#123;</span><br><span class="line">                   listeners.putIfAbsent(listener, new ChildListener() &#123;</span><br><span class="line">                       @Override</span><br><span class="line">                       public void childChanged(String parentPath, List&lt;String&gt; currentChilds) &#123;</span><br><span class="line">                           for (String child : currentChilds) &#123;</span><br><span class="line">                               child = URL.decode(child);</span><br><span class="line">                               if (!anyServices.contains(child)) &#123;</span><br><span class="line">                                   anyServices.add(child);</span><br><span class="line">                                   subscribe(url.setPath(child).addParameters(Constants.INTERFACE_KEY, child,</span><br><span class="line">                                           Constants.CHECK_KEY, String.valueOf(false)), listener);</span><br><span class="line">                               &#125;</span><br><span class="line">                           &#125;</span><br><span class="line">                       &#125;</span><br><span class="line">                   &#125;);</span><br><span class="line">                   zkListener = listeners.get(listener);</span><br><span class="line">               &#125;</span><br><span class="line">               zkClient.create(root, false);</span><br><span class="line">               List&lt;String&gt; services = zkClient.addChildListener(root, zkListener);</span><br><span class="line">               if (services != null &amp;&amp; !services.isEmpty()) &#123;</span><br><span class="line">                   for (String service : services) &#123;</span><br><span class="line">                       service = URL.decode(service);</span><br><span class="line">                       anyServices.add(service);</span><br><span class="line">                       subscribe(url.setPath(service).addParameters(Constants.INTERFACE_KEY, service,</span><br><span class="line">                               Constants.CHECK_KEY, String.valueOf(false)), listener);</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125; else &#123;</span><br><span class="line">               List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();</span><br><span class="line">               for (String path : toCategoriesPath(url)) &#123;</span><br><span class="line">                   ConcurrentMap&lt;NotifyListener, ChildListener&gt; listeners = zkListeners.get(url);</span><br><span class="line">                   if (listeners == null) &#123;</span><br><span class="line">                       zkListeners.putIfAbsent(url, new ConcurrentHashMap&lt;NotifyListener, ChildListener&gt;());</span><br><span class="line">                       listeners = zkListeners.get(url);</span><br><span class="line">                   &#125;</span><br><span class="line">                   ChildListener zkListener = listeners.get(listener);</span><br><span class="line">                   if (zkListener == null) &#123;</span><br><span class="line">                       listeners.putIfAbsent(listener, new ChildListener() &#123;</span><br><span class="line">                           @Override</span><br><span class="line">                           public void childChanged(String parentPath, List&lt;String&gt; currentChilds) &#123;</span><br><span class="line">                               ZookeeperRegistry.this.notify(url, listener, toUrlsWithEmpty(url, parentPath, currentChilds));</span><br><span class="line">                           &#125;</span><br><span class="line">                       &#125;);</span><br><span class="line">                       zkListener = listeners.get(listener);</span><br><span class="line">                   &#125;</span><br><span class="line">                   zkClient.create(path, false);</span><br><span class="line">                   List&lt;String&gt; children = zkClient.addChildListener(path, zkListener);</span><br><span class="line">                   if (children != null) &#123;</span><br><span class="line">                       urls.addAll(toUrlsWithEmpty(url, path, children));</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">               notify(url, listener, urls);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125; catch (Throwable e) &#123;</span><br><span class="line">           throw new RpcException(&quot;Failed to subscribe &quot; + url + &quot; to zookeeper &quot; + getUrl() + &quot;, cause: &quot; + e.getMessage(), e);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终通过AbstractRegistry#notify完成通知<br>AbstractRegistry#saveProperties 保存缓存文件到本地。</p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
+<li>如果zk挂掉后，本地consumer是否还可以消费对应的服务</li>
+<li>zk的provider和consumer注册的是什么节点？临时节点还是持久节点？</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -222,7 +249,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -235,213 +262,113 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/01/Dubbo-注册中心/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/Dubbo-XML解析/" class="archive-article-date">
-  	<time datetime="2019-08-01T11:17:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/08/01/Dubbo-注册远程服务/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Dubbo-注册远程服务
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/01/Dubbo-XML解析/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Dubbo XML解析</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/Dubbo-XML解析/">Dubbo XML解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Dubbo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/基本Hexo命令/" class="archive-article-date">
-  	<time datetime="2019-08-01T10:39:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/基本Hexo命令/">基本Hexo命令</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Hexo使用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo使用//" class="article-tag-list-link color2">Hexo使用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/Hexo-标签使用/" class="archive-article-date">
-  	<time datetime="2019-08-01T10:28:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/Hexo-标签使用/">Hexo 标签使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Hexo使用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo使用//" class="article-tag-list-link color2">Hexo使用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/31/使用hexo-github搭建免费个人博客详细教程/" class="archive-article-date">
-  	<time datetime="2019-07-31T08:17:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/31/使用hexo-github搭建免费个人博客详细教程/">使用hexo+github搭建免费个人博客详细教程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Hexo使用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo使用//" class="article-tag-list-link color2">Hexo使用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -464,8 +391,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

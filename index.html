@@ -134,6 +134,189 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Dubbo-注册远程服务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/01/Dubbo-注册远程服务/">Dubbo-注册远程服务</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/01/Dubbo-注册远程服务/" class="archive-article-date">
+  	<time datetime="2019-08-01T12:44:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ServiceBean"><a href="#ServiceBean" class="headerlink" title="ServiceBean"></a>ServiceBean</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class ServiceBean&lt;T&gt; extends ServiceConfig&lt;T&gt; implements InitializingBean, DisposableBean,</span><br><span class="line">        ApplicationContextAware, ApplicationListener&lt;ContextRefreshedEvent&gt;, BeanNameAware,</span><br><span class="line">        ApplicationEventPublisherAware</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onApplicationEvent(ContextRefreshedEvent event) &#123;</span><br><span class="line">    if (isDelay() &amp;&amp; !isExported() &amp;&amp; !isUnexported()) &#123;</span><br><span class="line">        if (logger.isInfoEnabled()) &#123;</span><br><span class="line">            logger.info(&quot;The service ready on spring started. service: &quot; + getInterface());</span><br><span class="line">        &#125;</span><br><span class="line">        export();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>spring通过解析<a href="dubbo:service" target="_blank" rel="noopener">dubbo:service</a>节点创建的单例Bean，每一个<a href="dubbo:service" target="_blank" rel="noopener">dubbo:service</a>都会创建一个ServiceBean。<br>在DubboNamespaceHandler负责解析XML，DubboBeanDefinitionParser#parse方法中，一下方法负责解析ServiceBean</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">else if (ServiceBean.class.equals(beanClass)) &#123;</span><br><span class="line">            String className = element.getAttribute(&quot;class&quot;);</span><br><span class="line">            if (className != null &amp;&amp; className.length() &gt; 0) &#123;</span><br><span class="line">                RootBeanDefinition classDefinition = new RootBeanDefinition();</span><br><span class="line">                classDefinition.setBeanClass(ReflectUtils.forName(className));</span><br><span class="line">                classDefinition.setLazyInit(false);</span><br><span class="line">                parseProperties(element.getChildNodes(), classDefinition);</span><br><span class="line">                beanDefinition.getPropertyValues().addPropertyValue(&quot;ref&quot;, new BeanDefinitionHolder(classDefinition, id + &quot;Impl&quot;));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="ServiceBean-afterPropertiesSet"><a href="#ServiceBean-afterPropertiesSet" class="headerlink" title="ServiceBean#afterPropertiesSet"></a>ServiceBean#afterPropertiesSet</h1><p> ServiceBean Bean初始化完成后，执行afterPropertiesSet 方法，</p>
+<h2 id="设置属性"><a href="#设置属性" class="headerlink" title="设置属性"></a>设置属性</h2><ol>
+<li>检查ServiceBean的某个属性（这里的属性包含如下6个）是否为空，如果为空，从applicationContext获取相应类型的bean，如果获取到了，则进行相应的设置。
+        
+          <a class="article-more-a" href="/2019/08/01/Dubbo-注册远程服务/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Dubbo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/01/Dubbo-注册远程服务/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Dubbo-注册中心" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/01/Dubbo-注册中心/">Dubbo 注册中心</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/01/Dubbo-注册中心/" class="archive-article-date">
+  	<time datetime="2019-08-01T12:43:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>RegistryService</p>
+        
+          <a class="article-more-a" href="/2019/08/01/Dubbo-注册中心/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Dubbo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/01/Dubbo-注册中心/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Dubbo-XML解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
