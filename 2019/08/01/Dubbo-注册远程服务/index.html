@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="ServiceBean123public class ServiceBean&amp;lt;T&amp;gt; extends ServiceConfig&amp;lt;T&amp;gt; implements InitializingBean, DisposableBean,        ApplicationContextAware, ApplicationListener&amp;lt;ContextRefreshedEvent">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-01T12:45:26.245Z">
+<meta property="og:updated_time" content="2019-08-01T12:51:59.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dubbo-注册远程服务">
 <meta name="twitter:description" content="ServiceBean123public class ServiceBean&amp;lt;T&amp;gt; extends ServiceConfig&amp;lt;T&amp;gt; implements InitializingBean, DisposableBean,        ApplicationContextAware, ApplicationListener&amp;lt;ContextRefreshedEvent">
@@ -159,6 +159,8 @@
       
         <h1 id="ServiceBean"><a href="#ServiceBean" class="headerlink" title="ServiceBean"></a>ServiceBean</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class ServiceBean&lt;T&gt; extends ServiceConfig&lt;T&gt; implements InitializingBean, DisposableBean,</span><br><span class="line">        ApplicationContextAware, ApplicationListener&lt;ContextRefreshedEvent&gt;, BeanNameAware,</span><br><span class="line">        ApplicationEventPublisherAware</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onApplicationEvent(ContextRefreshedEvent event) &#123;</span><br><span class="line">    if (isDelay() &amp;&amp; !isExported() &amp;&amp; !isUnexported()) &#123;</span><br><span class="line">        if (logger.isInfoEnabled()) &#123;</span><br><span class="line">            logger.info(&quot;The service ready on spring started. service: &quot; + getInterface());</span><br><span class="line">        &#125;</span><br><span class="line">        export();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>spring通过解析<a href="dubbo:service" target="_blank" rel="noopener">dubbo:service</a>节点创建的单例Bean，每一个<a href="dubbo:service" target="_blank" rel="noopener">dubbo:service</a>都会创建一个ServiceBean。<br>在DubboNamespaceHandler负责解析XML，DubboBeanDefinitionParser#parse方法中，一下方法负责解析ServiceBean</p>
@@ -166,7 +168,7 @@
 
 <h1 id="ServiceBean-afterPropertiesSet"><a href="#ServiceBean-afterPropertiesSet" class="headerlink" title="ServiceBean#afterPropertiesSet"></a>ServiceBean#afterPropertiesSet</h1><p> ServiceBean Bean初始化完成后，执行afterPropertiesSet 方法，</p>
 <h2 id="设置属性"><a href="#设置属性" class="headerlink" title="设置属性"></a>设置属性</h2><ol>
-<li>检查ServiceBean的某个属性（这里的属性包含如下6个）是否为空，如果为空，从applicationContext获取相应类型的bean，如果获取到了，则进行相应的设置。<a id="more"></a></li>
+<li>检查ServiceBean的某个属性（这里的属性包含如下6个）是否为空，如果为空，从applicationContext获取相应类型的bean，如果获取到了，则进行相应的设置。<!--more--></li>
 <li>ProviderConfig provider：其实就是看有没有配置<a href="dubbo:provider" target="_blank" rel="noopener">dubbo:provider</a></li>
 <li>ApplicationConfig application：其实就是看有没有配置<a href="dubbo:application" target="_blank" rel="noopener">dubbo:application</a></li>
 <li>ModuleConfig module：其实就是看有没有配置<a href="dubbo:module" target="_blank" rel="noopener">dubbo:module</a></li>
