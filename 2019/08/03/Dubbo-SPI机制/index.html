@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="SPI简介站在一个框架作者的角度来说，定义一个接口，自己默认给出几个接口的实现类，同时 允许框架的使用者也能够自定义接口的实现。现在一个简单的问题就是：如何优雅的根据一个接口来获取该接口的所有实现类呢？JDK SPI 正是为了优雅解决这个问题而生，SPI 全称为 (Service Provider Interface)，即服务提供商接口，是JDK内置的一种服务提供发现机制。目前有不少框架用它来做服">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-03T09:21:34.177Z">
+<meta property="og:updated_time" content="2019-08-03T09:35:32.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dubbo SPI机制">
 <meta name="twitter:description" content="SPI简介站在一个框架作者的角度来说，定义一个接口，自己默认给出几个接口的实现类，同时 允许框架的使用者也能够自定义接口的实现。现在一个简单的问题就是：如何优雅的根据一个接口来获取该接口的所有实现类呢？JDK SPI 正是为了优雅解决这个问题而生，SPI 全称为 (Service Provider Interface)，即服务提供商接口，是JDK内置的一种服务提供发现机制。目前有不少框架用它来做服">
@@ -158,6 +158,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="SPI简介"><a href="#SPI简介" class="headerlink" title="SPI简介"></a>SPI简介</h1><p>站在一个框架作者的角度来说，定义一个接口，自己默认给出几个接口的实现类，同时 允许框架的使用者也能够自定义接口的实现。现在一个简单的问题就是：如何优雅的根据一个接口来获取该接口的所有实现类呢？<br>JDK SPI 正是为了优雅解决这个问题而生，SPI 全称为 (Service Provider Interface)，即服务提供商接口，是JDK内置的一种服务提供发现机制。目前有不少框架用它来做服务的扩展发现，简单来说，它就是一种动态替换发现服务实现者的机制。</p>
+<a id="more"></a>
 <h2 id="JDK-SPI"><a href="#JDK-SPI" class="headerlink" title="JDK SPI"></a>JDK SPI</h2><p>JDK为SPI的实现提供了工具类，即java.util.ServiceLoader，ServiceLoader中定义的SPI规范没有什么特别之处，只需要有一个提供者配置文件（provider-configuration file），该文件需要在resource目录META-INF/services下，文件名就是服务接口的全限定名</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class SpiMain &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        ServiceLoader&lt;IHello&gt; loaders = ServiceLoader.load(IHello.class);</span><br><span class="line">        System.out.println(loaders);</span><br><span class="line"></span><br><span class="line">        for (IHello hello : loaders) &#123;</span><br><span class="line">            System.out.println(hello.sayHello(&quot;mergades&quot;));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
